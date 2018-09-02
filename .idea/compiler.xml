@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="MaxDila" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MaxDila" options="--add-modules=javafx.graphics,javafx.fxml,javafx.base,jdk.deploy.controlpanel,javafx.controls --add-exports=jdk.deploy.controlpanel/com.sun.deploy.jcp=ALL-UNNAMED" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<MenuBar xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.my.game.controllers.TopMenuBarController">
+  <menus>
+    <Menu mnemonicParsing="false" text="Gra">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#newGame" text="Nowa gra" />
+            <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Zapisz" />
+            <MenuItem mnemonicParsing="false" onAction="#loadGame" text="Wczytaj" />
+            <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Wyjscie" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#cheatsPanel" text="Kody..." />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Opcje">
+      <items>
+            <CheckMenuItem mnemonicParsing="false" onAction="#setAutoSave" text="Automatyczny zapis" />
+            <CheckMenuItem mnemonicParsing="false" onAction="#setAlwaysOnTop" text="Zawsze na wierzchu" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="Caspian">
+               <toggleGroup>
+                  <ToggleGroup fx:id="style" />
+               </toggleGroup></RadioMenuItem>
+            <RadioMenuItem mnemonicParsing="false" onAction="#setModena" selected="true" text="Modena" toggleGroup="$style" />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Pomoc">
+      <items>
+            <MenuItem mnemonicParsing="false" onAction="#about" text="O aplikacji" />
+        <MenuItem mnemonicParsing="false" onAction="#tutorial" text="Samouczek" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>

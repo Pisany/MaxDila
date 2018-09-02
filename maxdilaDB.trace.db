@@ -1,0 +1,8 @@
+2018-09-01 13:22:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabela "CHARACTERS" nie istnieje
+Table "CHARACTERS" not found; SQL statement:
+DROP TABLE `Characters`  [42102-193]
+2018-09-01 13:22:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabela "BANK" nie istnieje
+Table "BANK" not found; SQL statement:
+DROP TABLE `Bank`  [42102-193]
