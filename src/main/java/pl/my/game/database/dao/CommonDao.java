@@ -12,6 +12,7 @@ import java.util.List;
 
 public class CommonDao {
     public static final Logger LOGGER = LoggerFactory.getLogger(CommonDao.class);
+
     protected final ConnectionSource connectionSource;
 
     public CommonDao(ConnectionSource connectionSource) {
@@ -19,7 +20,7 @@ public class CommonDao {
     }
 
     public <T extends BaseModel, I> void createOrUpdate(BaseModel baseModel) {
-        Dao<T, I> dao = (Dao<T, I>) getDao((Class<T>) baseModel.getClass());
+        Dao<T, I> dao = getDao((Class<T>) baseModel.getClass());
         try {
             dao.createOrUpdate((T) baseModel);
         } catch (SQLException e) {
@@ -45,7 +46,7 @@ public class CommonDao {
         }
     }
 
-    public <T extends BaseModel, I> void deleteById(Class<T> cls, Integer id ) {
+    public <T extends BaseModel, I> void deleteById(Class<T> cls, Integer id) {
         try {
             Dao<T, I> dao = (Dao<T, I>) getDao(cls);
             dao.deleteById((I) id);
@@ -64,7 +65,8 @@ public class CommonDao {
         return null;
     }
 
-    public <T extends BaseModel, I> Dao<T, ?> getDao(Class<T> cls) {
+    // tworzy dao dla każdej klasy rozszeżającej BaseModel
+    public <T extends BaseModel, I> Dao<T, I> getDao(Class<T> cls) {
         try {
             return DaoManager.createDao(connectionSource, cls);
         } catch (SQLException e) {

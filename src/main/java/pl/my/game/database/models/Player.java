@@ -4,14 +4,12 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 
-@DatabaseTable(tableName ="Characters")
+@DatabaseTable(tableName ="Players")
 public class Player implements BaseModel{
 
     public Player(){
     }
 
-    @DatabaseField(columnName = "BANK_ID", foreign = true)
-    private Bank bank;
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -33,6 +31,9 @@ public class Player implements BaseModel{
 
     @DatabaseField(columnName = "Charisma", canBeNull = false)
     private int charisma;
+
+    @DatabaseField(columnName = "BANK_ID", foreign = true)
+    private Bank bank;
 
 
 

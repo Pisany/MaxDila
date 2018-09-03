@@ -7,6 +7,8 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName = "Bank")
 public class Bank implements BaseModel {
 
+
+
     @DatabaseField(columnName = "Id", generatedId = true)
     private int id;
 
@@ -15,6 +17,14 @@ public class Bank implements BaseModel {
 
     @DatabaseField(columnName = "Cash_in_bank")
     private double cashInBank;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public double getCash() {
         return cash;
