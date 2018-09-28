@@ -17,7 +17,6 @@ public class PlayerModel {
     public void create(int id, String name) {
         PlayerDao playerDao = new PlayerDao(DbManager.getConnectionSource());
 
-
         player.setId(id);
         player.setName(name);
         player.setLevel(1);
@@ -25,7 +24,6 @@ public class PlayerModel {
         player.setAgility(8);
         player.setCharisma(8);
         player.setIntellect(8);
-        player.setExperience(0);
         playerDao.createOrUpdate(player);
         playerDao.refresh(player);
         DbManager.closeConnectionSource();

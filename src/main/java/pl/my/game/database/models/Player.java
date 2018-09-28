@@ -7,7 +7,7 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName ="Players")
 public class Player implements BaseModel{
 
-    Player player;
+    private Player player;
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -33,11 +33,13 @@ public class Player implements BaseModel{
     @DatabaseField(columnName = "Avatar", canBeNull = false)
     private String avatar;
 
-    @DatabaseField(columnName = "Exp", canBeNull=false)
-    private int experience;
+
 
     @DatabaseField(columnName = "BANK_ID", foreign = true)
     private Bank bank;
+
+    @DatabaseField(columnName = "PLAYERSTATS_ID",foreign = true)
+    private PlayerStats playerStats;
 
 
 
@@ -122,12 +124,12 @@ public class Player implements BaseModel{
         this.player = player;
     }
 
-    public int getExperience() {
-        return experience;
+    public PlayerStats getPlayerStats() {
+        return playerStats;
     }
 
-    public void setExperience(int experience) {
-        this.experience = experience;
+    public void setPlayerStats(PlayerStats playerStats) {
+        this.playerStats = playerStats;
     }
 
     //    @Override

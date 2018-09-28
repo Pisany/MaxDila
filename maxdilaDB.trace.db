@@ -831,3 +831,7 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Pis
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:348)
 	... 35 more
+2018-09-28 16:49:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabela "PLAYERSTATS" nie istnieje
+Table "PLAYERSTATS" not found; SQL statement:
+DROP TABLE `PlayerStats`  [42102-193]

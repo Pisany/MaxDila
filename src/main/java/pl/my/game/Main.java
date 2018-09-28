@@ -34,6 +34,7 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         primaryStage.setTitle(FxmlUtils.getResourceBundle().getString("application.tittle"));
         primaryStage.show();
+
         DbManager.initDatabase();
 
 //        LevelModel levelModel=new LevelModel();
