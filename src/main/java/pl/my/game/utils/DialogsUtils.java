@@ -39,4 +39,12 @@ public class DialogsUtils {
         errorAlert.showAndWait();
     }
 
+    public static Optional<ButtonType> tutorialDialog(){
+        Alert confirmationDialog = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmationDialog.setTitle(bundle.getString("tutorial.title"));
+        confirmationDialog.setHeaderText(bundle.getString("tutorial.header"));
+        Optional<ButtonType> result = confirmationDialog.showAndWait();
+        return result;
+    }
+
 }

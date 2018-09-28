@@ -3,54 +3,158 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="namePane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.my.game.controllers.newGame.NamePaneController">
-   <children>
-      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
-            <HBox alignment="CENTER" spacing="20.0">
-               <children>
-                  <Label prefHeight="50.0" prefWidth="250.0" text="%info.NamePane" textAlignment="RIGHT">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="nameField" alignment="TOP_LEFT" />
-               </children>
-               <VBox.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </VBox.margin>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </HBox>
-            <Button fx:id="acceptButtonNamePane" mnemonicParsing="false" onAction="#acceptName" text="%acceptButton.NamePane" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#backToGameSlot" text="BACK">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-               <opaqueInsets>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </opaqueInsets>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
+<Pane fx:id="namePane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pl.my.game.controllers.newGame.NamePaneController">
+    <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
+        <HBox alignment="TOP_CENTER">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/black-blood.png"/>
+                </ImageView>
+                <Label text="%avatar1.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar1NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar1ButtonNamePane">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="avatarToggleGroup"/>
+                    </toggleGroup>
+                </RadioButton>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/fraud.png"/>
+                </ImageView>
+                <Label text="%avatar2.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar2NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar2ButtonNamePane" toggleGroup="$avatarToggleGroup"/>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/hitman.png"/>
+                </ImageView>
+                <Label text="%avatar3.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar3NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar3ButtonNamePane" toggleGroup="$avatarToggleGroup"/>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/iron-man.png"/>
+                </ImageView>
+                <Label text="%avatar4.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar4NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar4ButtonNamePane" toggleGroup="$avatarToggleGroup"/>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/james-bond.png"/>
+                </ImageView>
+                <Label text="%avatar5.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar5NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar5ButtonNamePane" toggleGroup="$avatarToggleGroup"/>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/old-lady.png"/>
+                </ImageView>
+                <Label text="%avatar6.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar6NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar6ButtonNamePane" toggleGroup="$avatarToggleGroup"/>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/ski-mask.png"/>
+                </ImageView>
+                <Label text="%avatar7.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar7NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar7ButtonNamePane" toggleGroup="$avatarToggleGroup"/>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0">
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../icon/avatars/walter-white.png"/>
+                </ImageView>
+                <Label text="%avatar8.NamePane" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="avatar8NamePane" mnemonicParsing="false"
+                             onAction="#setAvatar8ButtonNamePane" toggleGroup="$avatarToggleGroup"/>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20.0">
+            <VBox.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </VBox.margin>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <Label prefHeight="50.0" prefWidth="250.0" text="%info.NamePane" textAlignment="RIGHT">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="nameField" alignment="TOP_LEFT"/>
+        </HBox>
+        <Button fx:id="acceptButtonNamePane" mnemonicParsing="false" onAction="#acceptName"
+                text="%acceptButton.NamePane"/>
+        <HBox prefHeight="60.0" prefWidth="600.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#backToGameSlot" text="BACK">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </HBox>
+    </VBox>
 </Pane>

@@ -22,24 +22,16 @@ public class NewGameController implements Initializable {
 
     }
 
-
     @FXML
     private Pane newGame;
 
     @FXML
     private Pane gameSlotPane;
 
-
-
-
-
-
-
-
-
     public void newGame() {
         Pane pane=FxmlUtils.fxmlLoader(GAME_SLOT_FXML);
         newGame.getChildren().setAll(pane);
+        System.out.println("pane parent:"+pane.getParent());
     }
 
     public void loadGame() {

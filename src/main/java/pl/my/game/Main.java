@@ -5,7 +5,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import pl.my.game.database.dbutils.DbManager;
+import pl.my.game.database.models.Level;
+import pl.my.game.modelFX.LevelModel;
 import pl.my.game.utils.FxmlUtils;
+
+import static java.lang.Math.pow;
 
 public class Main extends Application {
     static Parent root;
@@ -17,7 +21,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 
 
     public void start(Stage primaryStage) {
@@ -33,9 +36,15 @@ public class Main extends Application {
         primaryStage.show();
         DbManager.initDatabase();
 
+//        LevelModel levelModel=new LevelModel();
+//        levelModel.initLevelTable();
+
+
+
+
+
 
     }
-
 
 
 }

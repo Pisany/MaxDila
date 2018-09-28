@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 public class MainController {
 
     @FXML
-    private BorderPane borderPane;
+    private BorderPane mainBorderPane;
 
     @FXML
     private LeftMenuController leftMenuController;
@@ -35,7 +35,7 @@ public class MainController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        borderPane.setCenter(parent);
+        mainBorderPane.setCenter(parent);
     }
 
     public void setRight(String fxmlPath) {
@@ -48,6 +48,21 @@ public class MainController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        borderPane.setRight(parent);
+        mainBorderPane.setRight(parent);
     }
+
+    public void setTop(String fxmlPath) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
+        loader.setResources(bundle);
+        Parent parent = null;
+        try {
+            parent = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mainBorderPane.setTop(parent);
+    }
+
+
 }

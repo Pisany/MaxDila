@@ -6,6 +6,7 @@ import com.j256.ormlite.logger.LoggerFactory;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import pl.my.game.database.models.Bank;
+import pl.my.game.database.models.Level;
 import pl.my.game.database.models.Player;
 
 import java.io.IOException;
@@ -59,6 +60,7 @@ public class DbManager {
         try {
             TableUtils.createTableIfNotExists(connectionSource, Player.class);
             TableUtils.createTableIfNotExists(connectionSource, Bank.class);
+            TableUtils.createTableIfNotExists(connectionSource, Level.class);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }

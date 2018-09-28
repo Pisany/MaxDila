@@ -1,5 +1,7 @@
-#vbox{
--fx-background-color: coral;}
+#topVBox {
+-fx-background-color: rgb(120,120,120)
+
+;}
 
 #leftMenu {
 -fx-background-color: gray;}

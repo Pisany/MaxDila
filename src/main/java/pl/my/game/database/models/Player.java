@@ -7,9 +7,7 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName ="Players")
 public class Player implements BaseModel{
 
-    public Player(){
-    }
-
+    Player player;
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -32,8 +30,15 @@ public class Player implements BaseModel{
     @DatabaseField(columnName = "Charisma", canBeNull = false)
     private int charisma;
 
+    @DatabaseField(columnName = "Avatar", canBeNull = false)
+    private String avatar;
+
+    @DatabaseField(columnName = "Exp", canBeNull=false)
+    private int experience;
+
     @DatabaseField(columnName = "BANK_ID", foreign = true)
     private Bank bank;
+
 
 
 
@@ -93,17 +98,51 @@ public class Player implements BaseModel{
         this.level = level;
     }
 
-    @Override
-    public String toString() {
-        return "Player{" +
-                "\nid=" + id +
-                "\n name= " + name +
-                "\n level='" + level + '\'' +
-                "\n strange='" + strange + '\'' +
-                "\n agility='" + agility + '\'' +
-                "\n intellect='" + intellect + '\'' +
-                "\n charisma='" + charisma + '\'' +
-
-                '}';
+    public String getAvatar() {
+        return avatar;
     }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public Bank getBank() {
+        return bank;
+    }
+
+    public void setBank(Bank bank) {
+        this.bank = bank;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
+
+    //    @Override
+//    public String toString() {
+//        return "Player{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", level=" + level +
+//                ", strange=" + strange +
+//                ", agility=" + agility +
+//                ", intellect=" + intellect +
+//                ", charisma=" + charisma +
+//                ", avatar='" + avatar + '\'' +
+//                ", bank=" + bank +
+//                '}';
+//    }
 }
+

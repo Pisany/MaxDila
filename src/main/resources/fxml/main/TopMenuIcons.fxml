@@ -5,91 +5,40 @@
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<HBox fx:id="vbox" prefHeight="100.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.my.game.controllers.TopMenuIconsController">
-
-   <children>
-      <VBox prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Label text="Dzien">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-            </Label>
-         </children>
-      </VBox>
-      <VBox prefHeight="200.0" prefWidth="100.0" />
-      <VBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="300.0">
-         <children>
-            <HBox alignment="TOP_RIGHT" prefWidth="300.0" spacing="140.0">
-               <children>
-                  <Label contentDisplay="TOP" text="Poziom" />
-                  <Label text="1" />
-               </children>
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-            </HBox>
-            <ProgressBar prefWidth="200.0" progress="0.0" />
-         </children></VBox>
-      <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="150.0">
-         <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="Kasa" />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Kasa" />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icon/moneyTopMenuItem.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Bank" />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icon/MoneyBankTopMenuItem.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-      <VBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="150.0">
-         <children>
-            <Label text="Zdrowie">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-            </Label>
-            <ProgressBar prefWidth="200.0" progress="0.0">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" />
-               </VBox.margin>
-            </ProgressBar>
-         </children>
-      </VBox>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0">
-         <children>
-            <Label text="Wytrzymalosc">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-            </Label>
-            <ProgressBar prefWidth="200.0" progress="0.0">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" />
-               </VBox.margin>
-            </ProgressBar>
-         </children>
-      </VBox>
-   </children>
-</HBox>
+<AnchorPane fx:id="topMenuIcon" prefHeight="100.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.my.game.controllers.TopMenuIconsController">
+   <Label text="Dzien" />
+   <ImageView fx:id="avatarTopMenuIcons" fitHeight="50.0" fitWidth="50.0" layoutX="202.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+   <Label fx:id="nameTopMenuIcons" layoutX="282.0" layoutY="27.0" prefHeight="17.0" prefWidth="100.0" text="Janek" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <ProgressBar layoutX="202.0" layoutY="62.0" prefHeight="18.0" prefWidth="180.0" progress="0.0" />
+   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="500.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../icon/MoneyBankTopMenuItem.png" />
+   </ImageView>
+   <Label fx:id="cashInBankTopMenuIcons" layoutX="451.0" layoutY="63.0" text="Bank" />
+   <Label contentDisplay="TOP" layoutX="282.0" layoutY="63.0" text="exp">
+      <padding>
+         <Insets right="18.0" />
+      </padding>
+   </Label>
+   <Label fx:id="cashTopMenuIcons" layoutX="451.0" layoutY="27.0" text="Kasa" />
+   <ProgressBar layoutX="650.0" layoutY="60.0" prefHeight="20.0" prefWidth="120.0" progress="0.0" />
+   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="500.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../icon/moneyTopMenuItem.png" />
+   </ImageView>
+   <ProgressBar layoutX="650.0" layoutY="26.0" prefHeight="20.0" prefWidth="120.0" progress="0.0" />
+   <Label layoutX="689.0" layoutY="27.0" text="Zdrowie" />
+   <Label layoutX="692.0" layoutY="63.0" text="Wytrzy" />
+   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="600.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../icon/EnergyTopMenuItem.png" />
+   </ImageView>
+   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="600.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../icon/HealthTopMenuItem.png" />
+   </ImageView>
+   <Label fx:id="levelTopMenuIcons" layoutX="394.0" layoutY="63.0" text="lvl" />
+</AnchorPane>

@@ -1,8 +1,9 @@
 package pl.my.game.controllers;
 
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import pl.my.game.database.models.Player;
+import pl.my.game.modelFX.PlayerModel;
 
 public class LeftMenuController {
 
