@@ -38,7 +38,7 @@ public class PlayerModel {
         return playerList;
     }
 
-    public Player initTopMenu(int counter){
+    public Player loadPlayerFromDB(int counter){
         PlayerDao playerDao=new PlayerDao(DbManager.getConnectionSource());
         Player player= new Player();
 

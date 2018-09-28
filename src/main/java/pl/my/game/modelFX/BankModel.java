@@ -28,7 +28,7 @@ public class BankModel {
         DbManager.closeConnectionSource();
         return bankList;
     }
-    public Bank initTopMenu(int counter){
+    public Bank loadBankFromDB(int counter){
         BankDao bankDao=new BankDao(DbManager.getConnectionSource());
         Bank bank= new Bank();
 

@@ -2,62 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceab70de-d501-4228-b215-cbeb31adf7b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maxdilaDB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/maxdilaDB.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maxdilaDB.trace.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/LeftMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/LeftMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuIconsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuIconsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/LoadGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/LoadGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NamePaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NamePaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NewGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NewGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/BankDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/CommonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/CommonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/LevelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/LevelDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/PlayerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/PlayerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dbutils/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/database/dbutils/DbManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/database/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/database/models/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/BankModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/BankModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/LevelModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/LevelModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/PlayerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/PlayerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/utils/DialogsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/utils/DialogsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/my/game/utils/FxmlUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/my/game/utils/FxmlUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bundles/messages_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bundles/messages_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main/BorderPaneMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main/BorderPaneMain.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main/TopMenuBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main/TopMenuBar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main/TopMenuIcons.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main/TopMenuIcons.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/LoadGameSlot.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/LoadGameSlot.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/NamePane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/NamePane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/NewGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/NewGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/NewGameSlot.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main/newGame/NewGameSlot.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/HealthTomMenuItem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bundles/messages_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bundles/messages_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/main/BorderPaneMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main/BorderPaneMain.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/main/TopMenuBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main/TopMenuBar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/main/TopMenuIcons.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main/TopMenuIcons.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/main/newGame/LoadGameSlot.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main/newGame/LoadGameSlot.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/main/newGame/NamePane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main/newGame/NamePane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/main/newGame/NewGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main/newGame/NewGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/main/newGame/NewGameSlot.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main/newGame/NewGameSlot.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/icon/HealthTomMenuItem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/icon/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/icon/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/LeftMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/LeftMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/TopMenuIconsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/TopMenuIconsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/newGame/LoadGameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/newGame/LoadGameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/newGame/NamePaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/newGame/NamePaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/newGame/NewGameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/controllers/newGame/NewGameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/database/dao/BankDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/database/dao/BankDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/database/dao/PlayerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/database/dao/PlayerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/database/dbutils/DbManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/database/dbutils/DbManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/database/models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/database/models/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/modelFX/BankModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/modelFX/BankModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/modelFX/PlayerModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/modelFX/PlayerModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/utils/DialogsUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/utils/DialogsUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/my/game/utils/FxmlUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/my/game/utils/FxmlUtils.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,8 +64,8 @@
         <counts>
           <entry key="class" value="4" />
           <entry key="css" value="6" />
-          <entry key="fxml" value="113" />
-          <entry key="java" value="227" />
+          <entry key="fxml" value="114" />
+          <entry key="java" value="233" />
           <entry key="png" value="1" />
           <entry key="properties" value="19" />
           <entry key="xml" value="4" />
@@ -116,9 +76,9 @@
           <entry key="CLASS" value="4" />
           <entry key="CSS" value="6" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="227" />
+          <entry key="JAVA" value="233" />
           <entry key="Properties" value="19" />
-          <entry key="XML" value="117" />
+          <entry key="XML" value="118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -126,14 +86,14 @@
           <entry key="css" value="158" />
           <entry key="dummy" value="44" />
           <entry key="fxml" value="346" />
-          <entry key="java" value="22449" />
+          <entry key="java" value="23254" />
           <entry key="properties" value="1071" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="158" />
-          <entry key="JAVA" value="22449" />
+          <entry key="JAVA" value="23254" />
           <entry key="PLAIN_TEXT" value="44" />
           <entry key="Properties" value="1071" />
           <entry key="XML" value="346" />
@@ -144,11 +104,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuIconsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="208">
+              <caret line="73" column="56" lean-forward="true" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,41 +117,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NewGameController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/PlayerDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/LoadGameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="115" column="45" lean-forward="true" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NamePaneController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="153">
+              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initBindings#0;class#NamePaneController#0" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#565#566#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dbutils/DbManager.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/CommonDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="667">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/LevelDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -199,8 +150,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/LevelModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="225">
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,10 +160,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/css/style.css">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+            <state relative-caret-position="242">
+              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="39" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -220,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/PlayerModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="41" column="75" lean-forward="true" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,10 +181,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/BankDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/body/ViewBody.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="187">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,8 +195,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/BankModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="43" />
+            <state relative-caret-position="51">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/BankDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -264,7 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/MainDbManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/utils/Player.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/main/FirstPanel.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/FirstPaneController.java" />
@@ -279,7 +241,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/NamePaneController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dbutils/DataCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/utils/DataCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/CommonDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/utils/DataCatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/BankFx.java" />
         <option value="$PROJECT_DIR$/src/main/resources/bundles/messages_pl.properties" />
@@ -300,21 +261,23 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/models/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/models/Bank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/LevelDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/models/Level.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/LevelModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/PlayerDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/SharedDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/SharedModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/PlayerModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NamePaneController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dbutils/DbManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuIconsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/BankModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/BankDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/LoadGameController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/PlayerModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/BankModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/CommonDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/PlayerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/LevelDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/LevelModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/body/ViewBody.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuIconsController.java" />
       </list>
     </option>
   </component>
@@ -397,7 +360,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="body" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
@@ -407,7 +370,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="newGame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
@@ -509,45 +471,10 @@
             <path>
               <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
               <item name="MaxDila" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MaxDila" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MaxDila" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MaxDila" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MaxDila" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="newGame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MaxDila" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MaxDila" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-              <item name="rightMenu" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="icon" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -558,7 +485,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Pisany/Documents/Java/Git/MaxDila/src/main/java/pl/my/game/controllers/MainController.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538137057569" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538143835068" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -665,9 +592,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27912253" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27912253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -676,7 +602,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.34590164" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.34590164" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -738,7 +664,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/utils/DataCatcher.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuBarController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
@@ -814,14 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main/TopMenuIcons.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -921,13 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/LevelDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/SharedDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/SharedModel.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/utils/FxmlUtils.java">
@@ -956,27 +866,6 @@
     <entry file="file://$PROJECT_DIR$/target/classes/fxml/main/newGame/NewGameSlot.fxml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/PlayerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/CommonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NamePaneController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1012,16 +901,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/LevelModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1029,20 +908,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuIconsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/LoadGameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="34">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NewGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main/TopMenuIcons.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="39" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/CommonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/PlayerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/PlayerModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="41" column="75" lean-forward="true" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1051,29 +967,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/BankDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="204">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/BankModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="43" />
+        <state relative-caret-position="51">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/NewGameController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/modelFX/LevelModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="225">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/newGame/LoadGameController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/database/dao/LevelDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="115" column="45" lean-forward="true" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
+        <state relative-caret-position="238">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/body/ViewBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/my/game/controllers/TopMenuIconsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="73" column="56" lean-forward="true" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
