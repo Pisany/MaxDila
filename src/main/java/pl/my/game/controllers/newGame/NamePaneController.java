@@ -7,9 +7,10 @@ import javafx.scene.control.*;
 
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import pl.my.game.database.models.Player;
 import pl.my.game.modelFX.BankModel;
 import pl.my.game.modelFX.PlayerModel;
-import pl.my.game.modelFX.PlayerStatsModel;
+import pl.my.game.modelFX.StatsModel;
 import pl.my.game.utils.FxmlUtils;
 
 import java.net.URL;
@@ -26,7 +27,7 @@ public class NamePaneController implements Initializable {
 
     private PlayerModel playerModel;
     private BankModel bankModel;
-    private PlayerStatsModel playerStatsModel;
+    private StatsModel statsModel;
 
 
     @FXML
@@ -52,7 +53,7 @@ public class NamePaneController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         bankModel = new BankModel();
         playerModel = new PlayerModel();
-        playerStatsModel = new PlayerStatsModel();
+        statsModel = new StatsModel();
         initBindings();
 
     }
@@ -67,9 +68,10 @@ public class NamePaneController implements Initializable {
     }
 
     public void acceptName() {
-        playerModel.create(counter, nameField.getText());
+        Player player = playerModel.create(counter, nameField.getText());
+        statsModel.setPlayer(player);
         bankModel.create(counter);
-        playerStatsModel.create(counter);
+        statsModel.create(counter);
 
 
         BorderPane mainBorderPane = (BorderPane) FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);

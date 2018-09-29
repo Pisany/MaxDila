@@ -12,13 +12,11 @@ public class ViewBody {
     private Player player=playerModel.loadPlayerFromDB(NamePaneController.counter) ;
 
     public int computeMaxEnergy(){
-        double maxEne;
-        maxEne=(100+player.getLevel()*10)+((100+player.getLevel()*10)*player.getAgility()*0.01);
+        double maxEne=(82+player.getLevel()*10)+((100+player.getLevel()*10)*player.getAgility()*0.01);
         return (int)maxEne;
     }
     public int computeMaxHealth(){
-        double maxHp;
-        maxHp=(100+player.getLevel()*10)+((100+player.getLevel()*10)*player.getStrange()*0.01);
+        double maxHp=(82+player.getLevel()*10)+((100+player.getLevel()*10)*player.getStrange()*0.01);
         return (int)maxHp;
     }
 

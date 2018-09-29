@@ -39,7 +39,9 @@ public class Player implements BaseModel{
     private Bank bank;
 
     @DatabaseField(columnName = "PLAYERSTATS_ID",foreign = true)
-    private PlayerStats playerStats;
+    private Stats stats;
+
+
 
 
 
@@ -124,13 +126,7 @@ public class Player implements BaseModel{
         this.player = player;
     }
 
-    public PlayerStats getPlayerStats() {
-        return playerStats;
-    }
 
-    public void setPlayerStats(PlayerStats playerStats) {
-        this.playerStats = playerStats;
-    }
 
     //    @Override
 //    public String toString() {

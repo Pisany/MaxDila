@@ -13,7 +13,7 @@ import java.util.List;
 public class PlayerDao extends CommonDao {
     public static final Logger LOGGER = LoggerFactory.getLogger(CommonDao.class);
 
-
+//TODO add LOGER
 
 
     public PlayerDao(ConnectionSource connectionSource) {
@@ -22,7 +22,6 @@ public class PlayerDao extends CommonDao {
 
     public List<String[]> loadQueryRaw() {//int id
             GenericRawResults<String[]> where;
-
         try {
             where= getDao(Player.class).queryRaw("SELECT * FROM Players "); //WHERE id ='"+id+"'
             return where.getResults();
@@ -35,16 +34,7 @@ public class PlayerDao extends CommonDao {
             GenericRawResults<String[]> where;
         try {
             where= getDao(Player.class).queryRaw("SELECT * FROM Players WHERE id ='"+count+"'");
-            List<String[]> resultsWhere = where.getResults();
-            resultsWhere.forEach(e->{
-                System.out.println("<Dao> : "+count+"");
-                for(String s:e){
-                    System.out.println(s);
-                }
-                System.out.println("<Doa/>");
-
-            });
-            return resultsWhere;
+            return where.getResults();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -1,6 +1,5 @@
 package pl.my.game.modelFX;
 
-import pl.my.game.database.dao.BankDao;
 import pl.my.game.database.dao.PlayerDao;
 import pl.my.game.database.dbutils.DbManager;
 
@@ -14,8 +13,11 @@ public class PlayerModel {
 
 
 
-    public void create(int id, String name) {
+    public Player create(int id, String name) {
         PlayerDao playerDao = new PlayerDao(DbManager.getConnectionSource());
+        System.out.println("------------------------------------------------------------------------------");
+
+        System.out.println("Player w playerModel: "+ this.player);
 
         player.setId(id);
         player.setName(name);
@@ -27,6 +29,7 @@ public class PlayerModel {
         playerDao.createOrUpdate(player);
         playerDao.refresh(player);
         DbManager.closeConnectionSource();
+        return player;
     }
 
     public ArrayList<String[]> initLoadGame(){
@@ -52,6 +55,11 @@ public class PlayerModel {
 
 
         DbManager.closeConnectionSource();
+        System.out.println("Player w playerModel: "+ player);
+        return player;
+    }
+
+    public Player getPlayer() {
         return player;
     }
 

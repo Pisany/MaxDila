@@ -8,7 +8,7 @@ import com.j256.ormlite.table.TableUtils;
 import pl.my.game.database.models.Bank;
 import pl.my.game.database.models.Level;
 import pl.my.game.database.models.Player;
-import pl.my.game.database.models.PlayerStats;
+import pl.my.game.database.models.Stats;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -62,7 +62,7 @@ public class DbManager {
             TableUtils.createTableIfNotExists(connectionSource, Player.class);
             TableUtils.createTableIfNotExists(connectionSource, Bank.class);
             TableUtils.createTableIfNotExists(connectionSource, Level.class);
-            TableUtils.createTableIfNotExists(connectionSource, PlayerStats.class);
+            TableUtils.createTableIfNotExists(connectionSource, Stats.class);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }
@@ -72,7 +72,7 @@ public class DbManager {
         try {
             TableUtils.dropTable(connectionSource, Player.class, true);
             TableUtils.dropTable(connectionSource, Bank.class, true);
-            TableUtils.dropTable(connectionSource, PlayerStats.class, true);
+            TableUtils.dropTable(connectionSource, Stats.class, true);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }

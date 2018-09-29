@@ -1,8 +1,15 @@
 #topVBox {
--fx-background-color: rgb(120,120,120)
+-fx-background-color: rgb(120,120,120);}
 
-;}
 
+
+#energyBarTopMenuIcons .track{
+-fx-background-color: yellow;
+
+}
+#energyBarTopMenuIcons .bar{
+-fx-background-color: DeepSkyBlue
+}
 #leftMenu {
 -fx-background-color: gray;}
 

@@ -3,11 +3,11 @@ package pl.my.game.database.models;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-@DatabaseTable(tableName ="PlayerStats")
+@DatabaseTable(tableName ="Stats")
 public
-class PlayerStats implements BaseModel {
+class Stats implements BaseModel {
 
-    private PlayerStats playerStats;
+    private Stats stats;
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -15,21 +15,32 @@ class PlayerStats implements BaseModel {
     @DatabaseField(columnName = "Hunger", canBeNull = false)
     private int hunger;
 
+    @DatabaseField(columnName = "MAXHunger", canBeNull = false)
+    private int maxHunger;
+
     @DatabaseField(columnName = "Energy", canBeNull = false)
     private int energy;
+    @DatabaseField(columnName = "MAXEnergy", canBeNull = false)
+    private int maxEnergy;
 
     @DatabaseField(columnName = "Health", canBeNull = false)
     private int health;
 
+    @DatabaseField(columnName = "MAXHealth", canBeNull = false)
+    private int maxHealth;
+
     @DatabaseField(columnName = "Exp", canBeNull=false)
     private int experience;
 
-    public PlayerStats getPlayerStats() {
-        return playerStats;
+    @DatabaseField(columnName = "MAXExp", canBeNull=false)
+    private int madExperience;
+
+    public Stats getStats() {
+        return stats;
     }
 
-    public void setPlayerStats(PlayerStats playerStats) {
-        this.playerStats = playerStats;
+    public void setStats(Stats stats) {
+        this.stats = stats;
     }
 
     public int getId() {
@@ -70,5 +81,37 @@ class PlayerStats implements BaseModel {
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    public int getMaxHunger() {
+        return maxHunger;
+    }
+
+    public void setMaxHunger(int maxHunger) {
+        this.maxHunger = maxHunger;
+    }
+
+    public int getMaxEnergy() {
+        return maxEnergy;
+    }
+
+    public void setMaxEnergy(int maxEnergy) {
+        this.maxEnergy = maxEnergy;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public void setMaxHealth(int maxHealth) {
+        this.maxHealth = maxHealth;
+    }
+
+    public int getMaxExperience() {
+        return madExperience;
+    }
+
+    public void setMadExperience(int madExperience) {
+        this.madExperience = madExperience;
     }
 }
