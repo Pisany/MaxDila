@@ -1,15 +1,30 @@
 #topVBox {
 -fx-background-color: rgb(120,120,120);}
 
+#newGame{
+-fx-background-color: rgb(0,0,0);}
 
+#newGameSlotPane{
+-fx-background-color: rgb(120,120,120);}
 
-#energyBarTopMenuIcons .track{
--fx-background-color: yellow;
+#loadGameSlotPane{
+-fx-background-color: rgb(120,120,120);}
 
-}
+#mainBorderPane{
+-fx-background-color: rgb(255,255,255);}
+
 #energyBarTopMenuIcons .bar{
--fx-background-color: DeepSkyBlue
-}
+-fx-background-color: rgb(128, 214, 149);}
+
+#healthBarTopMenuIcons .bar{
+-fx-background-color: rgb(214, 128, 128);}
+
+#expBarTopMenuIcons .bar{
+-fx-background-color: rgb(255, 255, 102);}
+
+#hungerBarTopMenuIcons .bar{
+-fx-background-color: rgb(153, 77, 51);}
+
 #leftMenu {
 -fx-background-color: gray;}
 

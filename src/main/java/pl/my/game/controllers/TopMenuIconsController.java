@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TopMenuIconsController implements Initializable {
-//TODO Fix progressbar
+//TODO Fix progressbar, observable
 
     @FXML public ImageView avatarTopMenuIcons;
     @FXML public Label levelTopMenuIcons;
@@ -36,6 +36,8 @@ public class TopMenuIconsController implements Initializable {
     @FXML public Label maxHpTopMenuIcons;
     @FXML public Label eneTopMenuIcons;
     @FXML public Label maxEneTopMenuIcons;
+    @FXML public ProgressBar hungerBarTopMenuIcons;
+    @FXML public Label presentHungerTopMenuItems;
 
     public TopMenuIconsController() {
     }
@@ -46,6 +48,7 @@ public class TopMenuIconsController implements Initializable {
         PlayerModel playerModel = new PlayerModel();
         BankModel bankModel = new BankModel();
         StatsModel statsModel = new StatsModel();
+        double foo=0;
 
         Player player = playerModel.loadPlayerFromDB(NamePaneController.counter);
         Bank bank = bankModel.loadBankFromDB(NamePaneController.counter);
@@ -60,15 +63,23 @@ public class TopMenuIconsController implements Initializable {
         cashTopMenuIcons.setText(String.valueOf(bank.getCash()));
         cashInBankTopMenuIcons.setText(String.valueOf(bank.getCashInBank()));
 
-        energyBarTopMenuIcons.setProgress((double)(stats.getEnergy()*100/stats.getMaxEnergy()));
+        foo=(double)stats.getHunger()/stats.getMaxHunger();
+        foo=0.63;
+        hungerBarTopMenuIcons.setProgress(foo);
+        presentHungerTopMenuItems.setText(String.valueOf((int)(foo*100))+"%");
+
+        foo=(double)stats.getEnergy()/stats.getMaxEnergy();
+        energyBarTopMenuIcons.setProgress(foo);
         eneTopMenuIcons.setText(String.valueOf(stats.getEnergy()));
         maxEneTopMenuIcons.setText(String.valueOf("/  " + stats.getMaxEnergy()));
 
-        healthBarTopMenuIcons.setProgress((double)stats.getHealth()*100/stats.getMaxHealth());
+        foo=(double)stats.getHealth()*100/stats.getMaxHealth();
+        healthBarTopMenuIcons.setProgress(foo);
         hpTopMenuIcons.setText(String.valueOf(stats.getHealth()));
         maxHpTopMenuIcons.setText(String.valueOf("/  " + stats.getMaxHealth()));
 
-        expBarTopMenuIcons.setProgress((double)stats.getExperience()*100/stats.getMaxExperience());
+        foo=(double)stats.getExperience()*100/stats.getMaxExperience();
+        expBarTopMenuIcons.setProgress(foo);
         presentExpTopMenuIcons.setText(String.valueOf(stats.getExperience()));
         expToNextLevelTopMenuIcons.setText(String.valueOf("/  " + stats.getMaxExperience()));
 

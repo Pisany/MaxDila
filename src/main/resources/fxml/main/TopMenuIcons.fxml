@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="topMenuIcon" prefHeight="100.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.my.game.controllers.TopMenuIconsController">
-   <Label text="Dzien" />
+   <Label layoutX="132.0" layoutY="6.0" text="Dzien" />
    <ImageView fx:id="avatarTopMenuIcons" fitHeight="50.0" fitWidth="50.0" layoutX="202.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-   <Label fx:id="nameTopMenuIcons" layoutX="282.0" layoutY="27.0" prefHeight="17.0" prefWidth="100.0" text="Janek" textAlignment="CENTER">
+   <Label fx:id="nameTopMenuIcons" alignment="CENTER" contentDisplay="RIGHT" layoutX="282.0" layoutY="27.0" prefHeight="17.0" prefWidth="100.0" text="Janek" textAlignment="CENTER">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
@@ -23,15 +23,15 @@
    </ImageView>
    <Label fx:id="cashInBankTopMenuIcons" layoutX="451.0" layoutY="63.0" text="Bank" />
    <Label fx:id="cashTopMenuIcons" layoutX="451.0" layoutY="27.0" text="Kasa" />
-   <ProgressBar fx:id="energyBarTopMenuIcons" layoutX="650.0" layoutY="60.0" prefHeight="20.0" prefWidth="120.0" progress="0.0" />
+   <ProgressBar fx:id="energyBarTopMenuIcons" layoutX="600.0" layoutY="61.0" prefHeight="20.0" prefWidth="120.0" progress="0.0" />
    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="500.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@../../icon/moneyTopMenuItem.png" />
    </ImageView>
-   <ProgressBar fx:id="healthBarTopMenuIcons" layoutX="650.0" layoutY="26.0" prefHeight="20.0" prefWidth="120.0" progress="0.0" />
-   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="600.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+   <ProgressBar fx:id="healthBarTopMenuIcons" layoutX="600.0" layoutY="26.0" prefHeight="20.0" prefWidth="120.0" progress="0.0" />
+   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="570.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@../../icon/EnergyTopMenuItem.png" />
    </ImageView>
-   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="600.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="570.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@../../icon/HealthTopMenuItem.png" />
    </ImageView>
    <Label fx:id="levelTopMenuIcons" layoutX="394.0" layoutY="63.0" text="lvl" />
@@ -49,7 +49,7 @@
          </Label>
       </children>
    </HBox>
-   <HBox alignment="TOP_CENTER" layoutX="650.0" layoutY="26.0" prefHeight="20.0" prefWidth="120.0">
+   <HBox alignment="TOP_CENTER" layoutX="600.0" layoutY="26.0" prefHeight="20.0" prefWidth="120.0">
       <children>
          <Label fx:id="hpTopMenuIcons" contentDisplay="CENTER" text="Zdrowie">
             <opaqueInsets>
@@ -65,7 +65,7 @@
          <Insets />
       </opaqueInsets>
    </HBox>
-   <HBox alignment="TOP_CENTER" layoutX="651.0" layoutY="62.0" prefHeight="20.0" prefWidth="120.0">
+   <HBox alignment="TOP_CENTER" layoutX="600.0" layoutY="61.0" prefHeight="20.0" prefWidth="120.0">
       <children>
          <Label fx:id="eneTopMenuIcons" text="Wytrzy">
             <HBox.margin>
@@ -75,4 +75,11 @@
          <Label fx:id="maxEneTopMenuIcons" layoutX="10.0" layoutY="10.0" text="max" />
       </children>
    </HBox>
+   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="32.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../icon/FoodTopMenuItem.png" />
+      </image>
+   </ImageView>
+   <ProgressBar fx:id="hungerBarTopMenuIcons" layoutX="-12.0" layoutY="34.0" prefHeight="20.0" prefWidth="72.0" progress="0.0" rotate="-90.0" />
+   <Label fx:id="presentHungerTopMenuItems" layoutX="35.0" layoutY="36.0" text="75%" />
 </AnchorPane>

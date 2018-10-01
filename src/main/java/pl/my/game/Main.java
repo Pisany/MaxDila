@@ -15,7 +15,6 @@ public class Main extends Application {
     static Parent root;
 
 
-    public static final String BORDER_PANE_MAIN_FXML = "/fxml/main/BorderPaneMain.fxml";
     public static final String NEW_GAME_FIRST_PANE_FXML = "/fxml/main/newGame/NewGame.fxml";
 
     public static void main(String[] args) {
