@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 public class MainController {
 
     @FXML
-    private BorderPane mainBorderPane;
+    public BorderPane mainBorderPane;
 
     @FXML
     private LeftMenuController leftMenuController;

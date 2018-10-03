@@ -10,7 +10,7 @@
 
 <Pane fx:id="loadGameSlotPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.my.game.controllers.newGame.LoadGameController">
    <children>
-      <VBox fx:id="loadGame" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="15.0">
+      <VBox  alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="15.0">
          <children>
             <ImageView fx:id="scene" fitHeight="100.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="gameSlotButton1" layoutX="160.0" layoutY="130.0" mnemonicParsing="false" onAction="#slot1" prefHeight="100.0" prefWidth="300.0">

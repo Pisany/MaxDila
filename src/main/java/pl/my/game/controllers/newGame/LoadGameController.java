@@ -7,9 +7,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import pl.my.game.database.dao.BankDao;
-import pl.my.game.database.dao.PlayerDao;
-import pl.my.game.database.dbutils.DbManager;
 import pl.my.game.modelFX.BankModel;
 import pl.my.game.modelFX.PlayerModel;
 import pl.my.game.utils.FxmlUtils;
@@ -21,12 +18,8 @@ import java.util.ResourceBundle;
 
 public class LoadGameController implements Initializable {
 
-    public static final String NEW_GAME_PANE_FXML = "/fxml/main/newGame/NewGame.fxml";
-    public static final String BORDER_PANE_MAIN_FXML = "/fxml/main/BorderPaneMain.fxml";
-
-    
-
-
+    private static final String NEW_GAME_PANE_FXML = "/fxml/main/newGame/NewGame.fxml";
+    private static final String BORDER_PANE_MAIN_FXML = "/fxml/main/BorderPaneMain.fxml";
 
 
     @Override
@@ -40,7 +33,7 @@ public class LoadGameController implements Initializable {
 
 
     @FXML
-    private Pane loadGame;
+    private Pane loadGameSlotPane;
 
     @FXML
     private Label name1_LoadGameSlot, name2_LoadGameSlot, name3_LoadGameSlot,
@@ -57,7 +50,7 @@ public class LoadGameController implements Initializable {
         NamePaneController.counter=1;
 
         BorderPane mainBorderPane = (BorderPane) FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);
-        loadGame.getChildren().setAll(mainBorderPane);
+        loadGameSlotPane.getChildren().setAll(mainBorderPane);
 
         mainBorderPane.getScene().getWindow().setX(mainBorderPane.getScene().getWindow().getX()-100);
         mainBorderPane.getScene().getWindow().setY(mainBorderPane.getScene().getWindow().getY()-100);
@@ -69,7 +62,7 @@ public class LoadGameController implements Initializable {
         NamePaneController.counter=2;
 
         BorderPane mainBorderPane = (BorderPane) FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);
-        loadGame.getChildren().setAll(mainBorderPane);
+        loadGameSlotPane.getChildren().setAll(mainBorderPane);
 
         mainBorderPane.getScene().getWindow().setX(mainBorderPane.getScene().getWindow().getX()-100);
         mainBorderPane.getScene().getWindow().setY(mainBorderPane.getScene().getWindow().getY()-100);
@@ -81,7 +74,7 @@ public class LoadGameController implements Initializable {
         NamePaneController.counter=3;
 
         BorderPane mainBorderPane = (BorderPane) FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);
-        loadGame.getChildren().setAll(mainBorderPane);
+        loadGameSlotPane.getChildren().setAll(mainBorderPane);
 
         mainBorderPane.getScene().getWindow().setX(mainBorderPane.getScene().getWindow().getX()-100);
         mainBorderPane.getScene().getWindow().setY(mainBorderPane.getScene().getWindow().getY()-100);
@@ -92,7 +85,7 @@ public class LoadGameController implements Initializable {
 
     public void backToFirstPane() {
         Pane pane=FxmlUtils.fxmlLoader(NEW_GAME_PANE_FXML);
-        loadGame.getChildren().setAll(pane);
+        loadGameSlotPane.getChildren().setAll(pane);
 
     }
 

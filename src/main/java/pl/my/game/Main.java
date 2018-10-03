@@ -12,7 +12,7 @@ import pl.my.game.utils.FxmlUtils;
 import static java.lang.Math.pow;
 
 public class Main extends Application {
-    static Parent root;
+    public static Parent root;
 
 
     public static final String NEW_GAME_FIRST_PANE_FXML = "/fxml/main/newGame/NewGame.fxml";
@@ -36,6 +36,7 @@ public class Main extends Application {
 
         DbManager.initDatabase();
 
+//********Generate level exp table
 //        LevelModel levelModel=new LevelModel();
 //        levelModel.initLevelTable();
 

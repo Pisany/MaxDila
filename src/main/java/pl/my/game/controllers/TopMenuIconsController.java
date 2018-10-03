@@ -50,6 +50,7 @@ public class TopMenuIconsController implements Initializable {
         StatsModel statsModel = new StatsModel();
         double foo=0;
 
+
         Player player = playerModel.loadPlayerFromDB(NamePaneController.counter);
         Bank bank = bankModel.loadBankFromDB(NamePaneController.counter);
         Stats stats = statsModel.loadFromDB(NamePaneController.counter);

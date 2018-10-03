@@ -33,8 +33,6 @@ public class Player implements BaseModel{
     @DatabaseField(columnName = "Avatar", canBeNull = false)
     private String avatar;
 
-
-
     @DatabaseField(columnName = "BANK_ID", foreign = true)
     private Bank bank;
 
