@@ -10,14 +10,13 @@ import java.util.ArrayList;
 public class PlayerModel {
     private Player player = new Player();
 
+    public static PlayerProperty playerProperty;
+
 
 
 
     public Player create(int id, String name) {
         PlayerDao playerDao = new PlayerDao(DbManager.getConnectionSource());
-        System.out.println("------------------------------------------------------------------------------");
-
-        System.out.println("Player w playerModel: "+ this.player);
 
         player.setId(id);
         player.setName(name);
@@ -26,9 +25,13 @@ public class PlayerModel {
         player.setAgility(8);
         player.setCharisma(8);
         player.setIntellect(8);
+
+
         playerDao.createOrUpdate(player);
         playerDao.refresh(player);
         DbManager.closeConnectionSource();
+        playerProperty=new PlayerProperty(player);
+
         return player;
     }
 
@@ -52,10 +55,10 @@ public class PlayerModel {
         player.setCharisma(Integer.parseInt(playerList.get(0)[6]));
         player.setAvatar(String.valueOf(playerList.get(0)[7]));
 
-
+        System.out.println(player);
+        playerProperty=new PlayerProperty(player);
 
         DbManager.closeConnectionSource();
-        System.out.println("Player w playerModel: "+ player);
         return player;
     }
 

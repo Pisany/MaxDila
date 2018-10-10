@@ -1,14 +1,14 @@
 package pl.my.game.modelFX;
 
 import pl.my.game.database.dao.BankDao;
-import pl.my.game.database.dao.PlayerDao;
 import pl.my.game.database.dbutils.DbManager;
 import pl.my.game.database.models.Bank;
-import pl.my.game.database.models.Player;
 
 import java.util.ArrayList;
 
 public class BankModel {
+
+    public static BankProperty bankProperty;
 
     public void create(int counter) {
         BankDao bankDao = new BankDao(DbManager.getConnectionSource());
@@ -16,6 +16,8 @@ public class BankModel {
         bank.setId(counter);
         bank.setCash(500);
         bank.setCashInBank(1500);
+
+        bankProperty = new BankProperty(bank);
 
         bankDao.createOrUpdate(bank);
         bankDao.refresh(bank);
@@ -36,6 +38,7 @@ public class BankModel {
         bank.setCash(Double.parseDouble(bankList.get(0)[1]));
         bank.setCashInBank(Double.parseDouble(bankList.get(0)[2]));
 
+        bankProperty = new BankProperty(bank);
 
         DbManager.closeConnectionSource();
         return bank;

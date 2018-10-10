@@ -35,21 +35,25 @@
       <Image url="@../../icon/HealthTopMenuItem.png" />
    </ImageView>
    <Label fx:id="levelTopMenuIcons" layoutX="394.0" layoutY="63.0" text="lvl" />
-   <HBox alignment="TOP_CENTER" layoutX="202.0" layoutY="63.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="180.0">
+   <HBox alignment="TOP_CENTER" layoutX="202.0" layoutY="63.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="180.0" spacing="5.0">
       <children>
-         <Label fx:id="presentExpTopMenuIcons" contentDisplay="TOP" text="exp" textAlignment="CENTER">
+         <Label fx:id="presentExpTopMenuIcons" alignment="TOP_CENTER" contentDisplay="TOP" text="exp" textAlignment="CENTER">
             <padding>
                <Insets right="10.0" />
             </padding>
          </Label>
-         <Label fx:id="expToNextLevelTopMenuIcons" contentDisplay="TOP" text="max" textAlignment="CENTER">
+         <Label text="/" />
+         <Label fx:id="expToNextLevelTopMenuIcons" alignment="CENTER" contentDisplay="TOP" text="max">
             <padding>
                <Insets right="18.0" />
             </padding>
          </Label>
       </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
    </HBox>
-   <HBox alignment="TOP_CENTER" layoutX="600.0" layoutY="26.0" prefHeight="20.0" prefWidth="120.0">
+   <HBox alignment="TOP_CENTER" layoutX="600.0" layoutY="26.0" prefHeight="20.0" prefWidth="120.0" spacing="5.0">
       <children>
          <Label fx:id="hpTopMenuIcons" contentDisplay="CENTER" text="Zdrowie">
             <opaqueInsets>
@@ -59,19 +63,21 @@
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
+         <Label text="/" />
          <Label fx:id="maxHpTopMenuIcons" text="max" />
       </children>
       <opaqueInsets>
          <Insets />
       </opaqueInsets>
    </HBox>
-   <HBox alignment="TOP_CENTER" layoutX="600.0" layoutY="61.0" prefHeight="20.0" prefWidth="120.0">
+   <HBox alignment="TOP_CENTER" layoutX="600.0" layoutY="61.0" prefHeight="20.0" prefWidth="120.0" spacing="5.0">
       <children>
          <Label fx:id="eneTopMenuIcons" text="Wytrzy">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
+         <Label text="/" />
          <Label fx:id="maxEneTopMenuIcons" layoutX="10.0" layoutY="10.0" text="max" />
       </children>
    </HBox>

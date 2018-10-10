@@ -93,7 +93,6 @@ public class NamePaneController implements Initializable {
 
     public void setAvatar1ButtonNamePane() {
         playerModel.setAvatarPlayer("/icon/avatars/black-blood.png");
-        System.out.println("Setavatar 1");
     }
 
     public void setAvatar2ButtonNamePane() {

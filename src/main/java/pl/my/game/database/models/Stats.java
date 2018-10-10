@@ -20,6 +20,7 @@ class Stats implements BaseModel {
 
     @DatabaseField(columnName = "Energy", canBeNull = false)
     private int energy;
+
     @DatabaseField(columnName = "MAXEnergy", canBeNull = false)
     private int maxEnergy;
 

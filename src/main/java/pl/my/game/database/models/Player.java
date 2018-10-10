@@ -126,19 +126,19 @@ public class Player implements BaseModel{
 
 
 
-    //    @Override
-//    public String toString() {
-//        return "Player{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", level=" + level +
-//                ", strange=" + strange +
-//                ", agility=" + agility +
-//                ", intellect=" + intellect +
-//                ", charisma=" + charisma +
-//                ", avatar='" + avatar + '\'' +
-//                ", bank=" + bank +
-//                '}';
-//    }
+        @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", level=" + level +
+                ", strange=" + strange +
+                ", agility=" + agility +
+                ", intellect=" + intellect +
+                ", charisma=" + charisma +
+                ", avatar='" + avatar + '\'' +
+                ", bank=" + bank +
+                '}';
+    }
 }
 

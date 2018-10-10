@@ -7,8 +7,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import pl.my.game.database.models.Bank;
+import pl.my.game.database.models.Player;
+import pl.my.game.database.models.Stats;
 import pl.my.game.modelFX.BankModel;
 import pl.my.game.modelFX.PlayerModel;
+import pl.my.game.modelFX.StatsModel;
 import pl.my.game.utils.FxmlUtils;
 
 
@@ -47,7 +51,7 @@ public class LoadGameController implements Initializable {
 //TODO Add exception handling when exist only one or two saves
 
     public void slot1() {
-        NamePaneController.counter=1;
+        loadFromDataBase(1);
 
         BorderPane mainBorderPane = (BorderPane) FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);
         loadGameSlotPane.getChildren().setAll(mainBorderPane);
@@ -56,10 +60,13 @@ public class LoadGameController implements Initializable {
         mainBorderPane.getScene().getWindow().setY(mainBorderPane.getScene().getWindow().getY()-100);
         mainBorderPane.getScene().getWindow().setHeight(640);
         mainBorderPane.getScene().getWindow().setWidth(820);
+
+
     }
 
     public void slot2() {
-        NamePaneController.counter=2;
+        loadFromDataBase(2);
+
 
         BorderPane mainBorderPane = (BorderPane) FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);
         loadGameSlotPane.getChildren().setAll(mainBorderPane);
@@ -71,7 +78,7 @@ public class LoadGameController implements Initializable {
     }
 
     public void slot3() {
-        NamePaneController.counter=3;
+        loadFromDataBase(3);
 
         BorderPane mainBorderPane = (BorderPane) FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);
         loadGameSlotPane.getChildren().setAll(mainBorderPane);
@@ -90,7 +97,6 @@ public class LoadGameController implements Initializable {
     }
 
     private void initStats() {
-        System.out.println("initStats()");
         PlayerModel playerModel = new PlayerModel();
         BankModel bankModel = new BankModel();
         ArrayList<String[]> playerList= playerModel.initLoadGame();
@@ -114,10 +120,18 @@ public class LoadGameController implements Initializable {
         image = new Image(String.valueOf(playerList.get(2)[7]));
         avatar3_LoadGameSlot.setImage(image);
         cash3_LoadGameSlot.setText(String.valueOf(bankList.get(2)[1]));
+    }
 
-        
+    private void loadFromDataBase(int counter){
+        System.out.println("Load from DataBase LoadGameController: "+counter);
+        PlayerModel playerModel = new PlayerModel();
+        BankModel bankModel = new BankModel();
+        StatsModel statsModel = new StatsModel();
 
 
+        playerModel.loadPlayerFromDB(counter);
+        bankModel.loadBankFromDB(counter);
+        statsModel.loadFromDB(counter);
 
     }
 }

@@ -7,16 +7,14 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import pl.my.game.controllers.newGame.NamePaneController;
-import pl.my.game.database.models.Bank;
-import pl.my.game.database.models.Player;
-import pl.my.game.database.models.Stats;
-import pl.my.game.modelFX.BankModel;
-import pl.my.game.modelFX.PlayerModel;
-import pl.my.game.modelFX.StatsModel;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static pl.my.game.modelFX.BankModel.*;
+import static pl.my.game.modelFX.PlayerModel.*;
+import static pl.my.game.modelFX.StatsModel.*;
 
 public class TopMenuIconsController implements Initializable {
 //TODO Fix progressbar, observable
@@ -39,50 +37,51 @@ public class TopMenuIconsController implements Initializable {
     @FXML public ProgressBar hungerBarTopMenuIcons;
     @FXML public Label presentHungerTopMenuItems;
 
-    public TopMenuIconsController() {
-    }
 
+    //TODO fix statsbar
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        PlayerModel playerModel = new PlayerModel();
-        BankModel bankModel = new BankModel();
-        StatsModel statsModel = new StatsModel();
+
         double foo=0;
 
+        //NAME
+        nameTopMenuIcons.textProperty().bind(playerProperty.propertyNameProperty());
 
-        Player player = playerModel.loadPlayerFromDB(NamePaneController.counter);
-        Bank bank = bankModel.loadBankFromDB(NamePaneController.counter);
-        Stats stats = statsModel.loadFromDB(NamePaneController.counter);
+        //LEVEL
+        levelTopMenuIcons.textProperty().bind(playerProperty.properyLevelProperty().asString());
 
-
-        nameTopMenuIcons.setText(player.getName());
-        levelTopMenuIcons.setText(String.valueOf(player.getLevel()));
-        Image image = new Image(String.valueOf(player.getAvatar()));
+        //AVATAR
+        Image image = new Image(playerProperty.getPropertyAvatar());
         avatarTopMenuIcons.setImage(image);
 
-        cashTopMenuIcons.setText(String.valueOf(bank.getCash()));
-        cashInBankTopMenuIcons.setText(String.valueOf(bank.getCashInBank()));
+        //CASH
+        cashTopMenuIcons.textProperty().bind(bankProperty.propertyCashProperty().asString());
+        cashInBankTopMenuIcons.textProperty().bind(bankProperty.propertyCashInBankProperty().asString());
 
-        foo=(double)stats.getHunger()/stats.getMaxHunger();
-        foo=0.63;
+        //HUNGER
+        foo= statsProperty.propertyHungerProperty().doubleValue()/statsProperty.propertyMaxHungerProperty().doubleValue();
+
         hungerBarTopMenuIcons.setProgress(foo);
-        presentHungerTopMenuItems.setText(String.valueOf((int)(foo*100))+"%");
+        presentHungerTopMenuItems.textProperty().bind(statsProperty.propertyHungerProperty().asString());
 
-        foo=(double)stats.getEnergy()/stats.getMaxEnergy();
+        //ENERGY
+        foo=statsProperty.propertyEnergyProperty().doubleValue()/statsProperty.propertyMaxEnergyProperty().doubleValue();
         energyBarTopMenuIcons.setProgress(foo);
-        eneTopMenuIcons.setText(String.valueOf(stats.getEnergy()));
-        maxEneTopMenuIcons.setText(String.valueOf("/  " + stats.getMaxEnergy()));
+        eneTopMenuIcons.textProperty().bind(statsProperty.propertyEnergyProperty().asString());
+        maxEneTopMenuIcons.textProperty().bind(statsProperty.propertyMaxEnergyProperty().asString());
 
-        foo=(double)stats.getHealth()*100/stats.getMaxHealth();
+        //HEALTH
+        foo=statsProperty.propertyHealthProperty().doubleValue()*100/statsProperty.propertyMaxHelthProperty().doubleValue();
         healthBarTopMenuIcons.setProgress(foo);
-        hpTopMenuIcons.setText(String.valueOf(stats.getHealth()));
-        maxHpTopMenuIcons.setText(String.valueOf("/  " + stats.getMaxHealth()));
+        hpTopMenuIcons.textProperty().bind(statsProperty.propertyHealthProperty().asString());
+        maxHpTopMenuIcons.textProperty().bind(statsProperty.propertyMaxHelthProperty().asString());
 
-        foo=(double)stats.getExperience()*100/stats.getMaxExperience();
+        //EXP
+        foo=statsProperty.propertyExperienceProperty().doubleValue()*100/statsProperty.propertyMaxExperienceProperty().doubleValue();
         expBarTopMenuIcons.setProgress(foo);
-        presentExpTopMenuIcons.setText(String.valueOf(stats.getExperience()));
-        expToNextLevelTopMenuIcons.setText(String.valueOf("/  " + stats.getMaxExperience()));
+        presentExpTopMenuIcons.textProperty().bind(statsProperty.propertyExperienceProperty().asString());
+        expToNextLevelTopMenuIcons.textProperty().bind(statsProperty.propertyMaxExperienceProperty().asString());
 
 
     }

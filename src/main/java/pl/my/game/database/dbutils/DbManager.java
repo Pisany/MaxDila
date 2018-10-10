@@ -27,7 +27,7 @@ public class DbManager {
 
     public static void initDatabase(){
         createConnectionSource();
-        //dropTable();
+//        dropTable();
         createTable();
         closeConnectionSource();
     }
@@ -61,7 +61,7 @@ public class DbManager {
         try {
             TableUtils.createTableIfNotExists(connectionSource, Player.class);
             TableUtils.createTableIfNotExists(connectionSource, Bank.class);
-            TableUtils.createTableIfNotExists(connectionSource, Level.class);
+//            TableUtils.createTableIfNotExists(connectionSource, Level.class);
             TableUtils.createTableIfNotExists(connectionSource, Stats.class);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());

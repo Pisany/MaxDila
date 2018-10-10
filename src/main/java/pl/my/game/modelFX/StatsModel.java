@@ -10,20 +10,18 @@ import java.util.ArrayList;
 public class StatsModel {
 
 
-    Player player;
+    private Player player;
+
+    public static StatsProperty statsProperty;
 
 
-    private Stats stats = new Stats();
 
     public void create(int counter) {
+        Stats stats = new Stats();
         StatsDao statsDao = new StatsDao(DbManager.getConnectionSource());
 
-        System.out.println("------------------------------------------------------------------------------");
-        System.out.println("Player w playerStatsModel: "+ this.player);
-
-
         stats.setId(counter);
-        stats.setHunger(100);
+        stats.setHunger(62);
         stats.setMaxHunger(100);
         stats.setEnergy(80);
         stats.setMaxEnergy(computeMaxEnergy());
@@ -31,6 +29,8 @@ public class StatsModel {
         stats.setMaxHealth(computeMaxHealth());
         stats.setExperience(0);
         stats.setMadExperience(100);
+
+        statsProperty = new StatsProperty(stats);
 
         statsDao.createOrUpdate(stats);
         statsDao.refresh(stats);
@@ -70,6 +70,9 @@ public class StatsModel {
         stats.setMaxHealth(Integer.parseInt(statsList.get(0)[6]));
         stats.setExperience(Integer.parseInt(statsList.get(0)[7]));
         stats.setMadExperience(Integer.parseInt(statsList.get(0)[8]));
+
+        statsProperty = new StatsProperty(stats);
+
 
         DbManager.closeConnectionSource();
         return stats;

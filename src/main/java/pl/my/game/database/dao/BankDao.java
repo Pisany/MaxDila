@@ -21,16 +21,8 @@ public class BankDao extends CommonDao {
         GenericRawResults<String[]> where;
         try {
             where= getDao(Bank.class).queryRaw("SELECT * FROM Bank");
-            List<String[]> resultsWhere = where.getResults();
-            resultsWhere.forEach(e->{
-                System.out.println("<Dao> : ");
-                for(String s:e){
-                    System.out.println(s);
-                }
-                System.out.println("<Doa/>");
 
-            });
-            return resultsWhere;
+            return where.getResults();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -40,16 +32,7 @@ public class BankDao extends CommonDao {
         GenericRawResults<String[]> where;
         try {
             where= getDao(Bank.class).queryRaw("SELECT * FROM Bank WHERE id ='"+count+"'");
-            List<String[]> resultsWhere = where.getResults();
-            resultsWhere.forEach(e->{
-                System.out.println("<Dao> : "+count+"");
-                for(String s:e){
-                    System.out.println(s);
-                }
-                System.out.println("<Doa/>");
-
-            });
-            return resultsWhere;
+            return where.getResults();
         } catch (SQLException e) {
             e.printStackTrace();
         }
