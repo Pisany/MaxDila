@@ -38,7 +38,7 @@ public class TopMenuIconsController implements Initializable {
     @FXML public Label presentHungerTopMenuItems;
 
 
-    //TODO fix statsbar
+    //TODO add % to hunger string format
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -60,27 +60,22 @@ public class TopMenuIconsController implements Initializable {
         cashInBankTopMenuIcons.textProperty().bind(bankProperty.propertyCashInBankProperty().asString());
 
         //HUNGER
-        foo= statsProperty.propertyHungerProperty().doubleValue()/statsProperty.propertyMaxHungerProperty().doubleValue();
-
-        hungerBarTopMenuIcons.setProgress(foo);
-        presentHungerTopMenuItems.textProperty().bind(statsProperty.propertyHungerProperty().asString());
+        hungerBarTopMenuIcons.progressProperty().bind(statsProperty.propertyHungerProperty().divide(statsProperty.propertyMaxHungerProperty()));
+        presentHungerTopMenuItems.textProperty().bind(statsProperty.propertyHungerProperty().asString("%.0f"));
 
         //ENERGY
-        foo=statsProperty.propertyEnergyProperty().doubleValue()/statsProperty.propertyMaxEnergyProperty().doubleValue();
-        energyBarTopMenuIcons.setProgress(foo);
-        eneTopMenuIcons.textProperty().bind(statsProperty.propertyEnergyProperty().asString());
+        energyBarTopMenuIcons.progressProperty().bind(statsProperty.propertyEnergyProperty().divide(statsProperty.propertyMaxEnergyProperty()));
+        eneTopMenuIcons.textProperty().bind(statsProperty.propertyEnergyProperty().asString("%.0f"));
         maxEneTopMenuIcons.textProperty().bind(statsProperty.propertyMaxEnergyProperty().asString());
 
         //HEALTH
-        foo=statsProperty.propertyHealthProperty().doubleValue()*100/statsProperty.propertyMaxHelthProperty().doubleValue();
-        healthBarTopMenuIcons.setProgress(foo);
-        hpTopMenuIcons.textProperty().bind(statsProperty.propertyHealthProperty().asString());
+        healthBarTopMenuIcons.progressProperty().bind(statsProperty.propertyHealthProperty().divide(statsProperty.propertyMaxHelthProperty()));
+        hpTopMenuIcons.textProperty().bind(statsProperty.propertyHealthProperty().asString("%.0f"));
         maxHpTopMenuIcons.textProperty().bind(statsProperty.propertyMaxHelthProperty().asString());
 
         //EXP
-        foo=statsProperty.propertyExperienceProperty().doubleValue()*100/statsProperty.propertyMaxExperienceProperty().doubleValue();
-        expBarTopMenuIcons.setProgress(foo);
-        presentExpTopMenuIcons.textProperty().bind(statsProperty.propertyExperienceProperty().asString());
+        expBarTopMenuIcons.progressProperty().bind(statsProperty.propertyExperienceProperty().divide(statsProperty.propertyMaxExperienceProperty()));
+        presentExpTopMenuIcons.textProperty().bind(statsProperty.propertyExperienceProperty().asString("%.0f"));
         expToNextLevelTopMenuIcons.textProperty().bind(statsProperty.propertyMaxExperienceProperty().asString());
 
 

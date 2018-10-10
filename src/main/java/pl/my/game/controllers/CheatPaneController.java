@@ -89,7 +89,7 @@ public class CheatPaneController {
             case "add_exp":
                 System.out.println("Exp + " + part[1]);
                 outPut.add(appInput);
-                statsProperty.setPropertyExperience(statsProperty.getPropertyExperience()+(Integer.parseInt(part[1])));
+                statsProperty.setPropertyExperience(statsProperty.getPropertyExperience()+(Double.parseDouble(part[1])));
                 foo= true;
                 break;
 
