@@ -2,11 +2,13 @@ package pl.my.game.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import pl.my.game.modelFX.LevelModel;
 
 
 import java.net.URL;
@@ -17,7 +19,6 @@ import static pl.my.game.modelFX.PlayerModel.*;
 import static pl.my.game.modelFX.StatsModel.*;
 
 public class TopMenuIconsController implements Initializable {
-//TODO Fix progressbar, observable
 
     @FXML public ImageView avatarTopMenuIcons;
     @FXML public Label levelTopMenuIcons;
@@ -36,6 +37,8 @@ public class TopMenuIconsController implements Initializable {
     @FXML public Label maxEneTopMenuIcons;
     @FXML public ProgressBar hungerBarTopMenuIcons;
     @FXML public Label presentHungerTopMenuItems;
+    @FXML public Button levelUp;
+    @FXML public ImageView levelButtonTopMenuIcons;
 
 
     //TODO add % to hunger string format
@@ -78,8 +81,17 @@ public class TopMenuIconsController implements Initializable {
         presentExpTopMenuIcons.textProperty().bind(statsProperty.propertyExperienceProperty().asString("%.0f"));
         expToNextLevelTopMenuIcons.textProperty().bind(statsProperty.propertyMaxExperienceProperty().asString());
 
+        //LEVEL UP BUTTON
+        levelUp.visibleProperty().bind(playerProperty.propertyLevelUpProperty());
 
     }
 
 
+    public void levelUpAction() {
+        playerProperty.setPropertyLevelUp(false);
+        statsProperty.setPropertyExperience(statsProperty.getPropertyExperience()-statsProperty.getPropertyMaxExperience());
+        playerProperty.setProperyLevel(playerProperty.getProperyLevel()+1);
+        LevelModel levelModel = new LevelModel();
+        statsProperty.setPropertyMaxExperience(levelModel.loadLevelFromDB(playerProperty.getProperyLevel()));
+    }
 }

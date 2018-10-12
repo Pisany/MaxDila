@@ -1,9 +1,6 @@
 package pl.my.game.modelFX;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 import pl.my.game.database.models.Player;
 
 public class PlayerProperty {
@@ -15,6 +12,7 @@ public class PlayerProperty {
     private IntegerProperty  propertyIntellect= new SimpleIntegerProperty(this, "intellect");
     private IntegerProperty  propertyCharisma= new SimpleIntegerProperty(this, "charisma");
     private StringProperty  propertyAvatar= new SimpleStringProperty(this, "avatar");
+    private BooleanProperty propertyLevelUp = new SimpleBooleanProperty(this, "levelUP");
 
     PlayerProperty(Player player){
         propertyName.set(player.getName());
@@ -24,6 +22,7 @@ public class PlayerProperty {
         propertyIntellect.set(player.getIntellect());
         propertyCharisma.set(player.getCharisma());
         propertyAvatar.set(player.getAvatar());
+        propertyLevelUp.set(false);
     }
 
     public String getPropertyName() {
@@ -48,6 +47,8 @@ public class PlayerProperty {
 
     public void setProperyLevel(int properyLevel) {
         this.properyLevel.set(properyLevel);
+        StatsModel.statsProperty.setPropertyMaxHelth();
+        StatsModel.statsProperty.setPropertyMaxEnergy();
     }
 
     public int getPropertyStrange() {
@@ -60,6 +61,7 @@ public class PlayerProperty {
 
     public void setPropertyStrange(int propertyStrange) {
         this.propertyStrange.set(propertyStrange);
+        StatsModel.statsProperty.setPropertyMaxHelth();
     }
 
     public int getPropertyAgility() {
@@ -72,6 +74,8 @@ public class PlayerProperty {
 
     public void setPropertyAgility(int propertyAgility) {
         this.propertyAgility.set(propertyAgility);
+        StatsModel.statsProperty.setPropertyMaxEnergy();
+
     }
 
     public int getPropertyIntellect() {
@@ -108,5 +112,19 @@ public class PlayerProperty {
 
     public void setPropertyAvatar(String propertyAvatar) {
         this.propertyAvatar.set(propertyAvatar);
+    }
+
+    public boolean isPropertyLevelUp() {
+        return propertyLevelUp.get();
+    }
+
+    public BooleanProperty propertyLevelUpProperty() {
+
+        return propertyLevelUp;
+
+    }
+
+    public void setPropertyLevelUp(boolean propertyLevelUp) {
+        this.propertyLevelUp.set(propertyLevelUp);
     }
 }

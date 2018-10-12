@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
@@ -88,4 +89,16 @@
    </ImageView>
    <ProgressBar fx:id="hungerBarTopMenuIcons" layoutX="-12.0" layoutY="34.0" prefHeight="20.0" prefWidth="72.0" progress="0.0" rotate="-90.0" />
    <Label fx:id="presentHungerTopMenuItems" layoutX="35.0" layoutY="36.0" text="75%" />
+   <Button fx:id="levelUp" graphicTextGap="0.0" layoutX="388.0" layoutY="60.0" maxHeight="25.0" maxWidth="25.0" mnemonicParsing="false" onAction="#levelUpAction" prefHeight="25.0" prefWidth="25.0">
+      <graphic>
+         <ImageView fx:id="levelButtonTopMenuIcons" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../icon/LevelUP.png" />
+            </image>
+         </ImageView>
+      </graphic>
+      <padding>
+         <Insets top="1.0" />
+      </padding>
+   </Button>
 </AnchorPane>

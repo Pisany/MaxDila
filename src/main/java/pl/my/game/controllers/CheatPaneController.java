@@ -67,14 +67,14 @@ public class CheatPaneController {
             case "medic":
                 System.out.println("Health + 100");
                 outPut.add(appInput);
-                statsProperty.setPropertyHealth(statsProperty.getPropertyHealth()+100);
+                statsProperty.setPropertyHealth(statsProperty.getPropertyMaxHelth());
                 foo= true;
             break;
 
             case "energy":
                 System.out.println("Energy + 100");
                 outPut.add(appInput);
-                statsProperty.setPropertyEnergy(statsProperty.getPropertyEnergy()+100);
+                statsProperty.setPropertyEnergy(statsProperty.getPropertyMaxEnergy());
                 foo= true;
 
                 break;

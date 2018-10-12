@@ -4,19 +4,20 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import pl.my.game.database.models.Player;
 import pl.my.game.database.models.Stats;
 
 
 public class StatsProperty {
 
-    private DoubleProperty propertyHunger= new SimpleDoubleProperty(this,"propertyHunger");
-    private IntegerProperty propertyMaxHunger= new SimpleIntegerProperty(this,"propertyMaxHunger");
-    private DoubleProperty propertyEnergy= new SimpleDoubleProperty(this,"propertyEnergy");
-    private IntegerProperty propertyMaxEnergy= new SimpleIntegerProperty(this,"propertyMaxEnergy");
-    private DoubleProperty propertyHealth= new SimpleDoubleProperty(this,"propertyHealth");
-    private IntegerProperty propertyMaxHelth= new SimpleIntegerProperty(this,"propertyMaxHelth");
-    private DoubleProperty propertyExperience= new SimpleDoubleProperty(this,"propertyExperience");
-    private IntegerProperty propertyMaxExperience= new SimpleIntegerProperty(this,"propertyMaxExperience");
+    private DoubleProperty propertyHunger = new SimpleDoubleProperty(this, "propertyHunger");
+    private IntegerProperty propertyMaxHunger = new SimpleIntegerProperty(this, "propertyMaxHunger");
+    private DoubleProperty propertyEnergy = new SimpleDoubleProperty(this, "propertyEnergy");
+    private IntegerProperty propertyMaxEnergy = new SimpleIntegerProperty(this, "propertyMaxEnergy");
+    private DoubleProperty propertyHealth = new SimpleDoubleProperty(this, "propertyHealth");
+    private IntegerProperty propertyMaxHelth = new SimpleIntegerProperty(this, "propertyMaxHelth");
+    private DoubleProperty propertyExperience = new SimpleDoubleProperty(this, "propertyExperience");
+    private IntegerProperty propertyMaxExperience = new SimpleIntegerProperty(this, "propertyMaxExperience");
 
     public double getPropertyHunger() {
         return propertyHunger.get();
@@ -27,8 +28,8 @@ public class StatsProperty {
     }
 
     public void setPropertyHunger(double propertyHunger) {
-        if(propertyHunger>propertyMaxHungerProperty().getValue())
-        this.propertyHunger.set(propertyMaxHungerProperty().getValue());
+        if (propertyHunger > propertyMaxHungerProperty().getValue())
+            this.propertyHunger.set(propertyMaxHungerProperty().getValue());
         else
             this.propertyHunger.set(propertyHunger);
 
@@ -55,10 +56,10 @@ public class StatsProperty {
     }
 
     public void setPropertyEnergy(double propertyEnergy) {
-        if(propertyEnergy>propertyMaxEnergyProperty().getValue())
+        if (propertyEnergy > propertyMaxEnergyProperty().getValue())
             this.propertyEnergy.set(propertyMaxEnergyProperty().getValue());
         else
-        this.propertyEnergy.set(propertyEnergy);
+            this.propertyEnergy.set(propertyEnergy);
     }
 
     public int getPropertyMaxEnergy() {
@@ -69,8 +70,9 @@ public class StatsProperty {
         return propertyMaxEnergy;
     }
 
-    public void setPropertyMaxEnergy(int propertyMaxEnergy) {
-        this.propertyMaxEnergy.set(propertyMaxEnergy);
+    public void setPropertyMaxEnergy() {
+        double foo=(82+PlayerModel.playerProperty.getProperyLevel()*10)+((100+PlayerModel.playerProperty.getProperyLevel()*10)*(PlayerModel.playerProperty.getPropertyAgility()*0.01));
+        this.propertyMaxEnergy.set((int) foo);
     }
 
     public double getPropertyHealth() {
@@ -82,10 +84,10 @@ public class StatsProperty {
     }
 
     public void setPropertyHealth(double propertyHealth) {
-        if(propertyHealth>propertyMaxHelthProperty().getValue())
+        if (propertyHealth > propertyMaxHelthProperty().getValue())
             this.propertyHealth.set(propertyMaxEnergyProperty().getValue());
         else
-        this.propertyHealth.set(propertyHealth);
+            this.propertyHealth.set(propertyHealth);
     }
 
     public int getPropertyMaxHelth() {
@@ -96,8 +98,9 @@ public class StatsProperty {
         return propertyMaxHelth;
     }
 
-    public void setPropertyMaxHelth(int propertyMaxHelth) {
-        this.propertyMaxHelth.set(propertyMaxHelth);
+    void setPropertyMaxHelth() {
+        double foo=(82+PlayerModel.playerProperty.getProperyLevel()*10)+((100+PlayerModel.playerProperty.getProperyLevel()*10)*(PlayerModel.playerProperty.getPropertyStrange()*0.01));
+        this.propertyMaxHelth.set((int) foo);
     }
 
     public double getPropertyExperience() {
@@ -110,6 +113,10 @@ public class StatsProperty {
 
     public void setPropertyExperience(double propertyExperience) {
         this.propertyExperience.set(propertyExperience);
+        if(StatsModel.statsProperty.getPropertyExperience()>= StatsModel.statsProperty.getPropertyMaxExperience())
+            PlayerModel.playerProperty.setPropertyLevelUp(true);
+        else
+            PlayerModel.playerProperty.setPropertyLevelUp(false);
     }
 
     public int getPropertyMaxExperience() {
@@ -125,8 +132,7 @@ public class StatsProperty {
     }
 
 
-
-    StatsProperty(Stats stats){
+    StatsProperty(Stats stats) {
         propertyHunger.set(stats.getHunger());
         propertyMaxHunger.set(stats.getMaxHunger());
         propertyEnergy.set(stats.getEnergy());
@@ -135,7 +141,6 @@ public class StatsProperty {
         propertyMaxHelth.set(stats.getMaxHealth());
         propertyExperience.set(stats.getExperience());
         propertyMaxExperience.set(stats.getMaxExperience());
-
 
 
     }

@@ -24,9 +24,9 @@ public class StatsModel {
         stats.setHunger(62);
         stats.setMaxHunger(100);
         stats.setEnergy(80);
-        stats.setMaxEnergy(computeMaxEnergy());
+        stats.setMaxEnergy(82);
         stats.setHealth(100);
-        stats.setMaxHealth(computeMaxHealth());
+        stats.setMaxHealth(82);
         stats.setExperience(0);
         stats.setMadExperience(100);
 

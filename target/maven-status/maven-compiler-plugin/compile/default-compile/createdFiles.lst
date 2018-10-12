@@ -6,7 +6,6 @@ pl\my\game\controllers\newGame\NewGameController.class
 pl\my\game\modelFX\PlayerModel.class
 pl\my\game\database\dao\CommonDao.class
 pl\my\game\utils\FxmlUtils.class
-pl\my\game\modelFX\BankFx.class
 pl\my\game\modelFX\BankModel.class
 pl\my\game\controllers\LeftMenuController.class
 pl\my\game\database\dbutils\DbManager.class
