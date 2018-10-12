@@ -44,9 +44,10 @@ public class PlayerModel {
 
     public Player loadPlayerFromDB(int counter){
         PlayerDao playerDao=new PlayerDao(DbManager.getConnectionSource());
-        Player player= new Player();
+        player= new Player();
 
         ArrayList<String[]> playerList = (ArrayList<String[]>) playerDao.loadQueryRawByID(counter);
+        player.setId(Integer.parseInt(playerList.get(0)[0]));
         player.setName(String.valueOf(playerList.get(0)[1]));
         player.setLevel(Integer.parseInt(playerList.get(0)[2]));
         player.setStrange(Integer.parseInt(playerList.get(0)[3]));
@@ -60,6 +61,24 @@ public class PlayerModel {
 
         DbManager.closeConnectionSource();
         return player;
+    }
+
+    public void savePlayerToDB(){
+        PlayerDao playerDao = new PlayerDao(DbManager.getConnectionSource());
+
+        player.setId(playerProperty.getPropertyId());
+        player.setName(playerProperty.getPropertyName());
+        player.setLevel(playerProperty.getProperyLevel());
+        player.setStrange(playerProperty.getPropertyStrange());
+        player.setAgility(playerProperty.getPropertyAgility());
+        player.setCharisma(playerProperty.getPropertyCharisma());
+        player.setIntellect(playerProperty.getPropertyIntellect());
+        player.setAvatar(playerProperty.getPropertyAvatar());
+
+        playerDao.createOrUpdate(player);
+        DbManager.closeConnectionSource();
+
+
     }
 
     public Player getPlayer() {

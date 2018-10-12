@@ -34,7 +34,7 @@ class Stats implements BaseModel {
     private int experience;
 
     @DatabaseField(columnName = "MAXExp", canBeNull=false)
-    private int madExperience;
+    private int maxExperience;
 
     public Stats getStats() {
         return stats;
@@ -109,10 +109,10 @@ class Stats implements BaseModel {
     }
 
     public int getMaxExperience() {
-        return madExperience;
+        return maxExperience;
     }
 
-    public void setMadExperience(int madExperience) {
-        this.madExperience = madExperience;
+    public void setMaxExperience(int madExperience) {
+        this.maxExperience = madExperience;
     }
 }

@@ -5,6 +5,7 @@ import pl.my.game.database.models.Player;
 
 public class PlayerProperty {
 
+    private IntegerProperty propertyId = new SimpleIntegerProperty(this, "id");
     private StringProperty propertyName = new SimpleStringProperty(this, "name");
     private IntegerProperty properyLevel = new SimpleIntegerProperty(this,"level");
     private IntegerProperty  propertyStrange= new SimpleIntegerProperty(this, "strange");
@@ -15,6 +16,7 @@ public class PlayerProperty {
     private BooleanProperty propertyLevelUp = new SimpleBooleanProperty(this, "levelUP");
 
     PlayerProperty(Player player){
+        propertyId.set(player.getId());
         propertyName.set(player.getName());
         properyLevel.set(player.getLevel());
         propertyStrange.set(player.getStrange());
@@ -23,6 +25,18 @@ public class PlayerProperty {
         propertyCharisma.set(player.getCharisma());
         propertyAvatar.set(player.getAvatar());
         propertyLevelUp.set(false);
+    }
+
+    public int getPropertyId() {
+        return propertyId.get();
+    }
+
+    public IntegerProperty propertyIdProperty() {
+        return propertyId;
+    }
+
+    public void setPropertyId(int propertyId) {
+        this.propertyId.set(propertyId);
     }
 
     public String getPropertyName() {

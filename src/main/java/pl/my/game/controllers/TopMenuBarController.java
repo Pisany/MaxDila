@@ -7,11 +7,20 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckMenuItem;
-import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
+import pl.my.game.database.dao.BankDao;
+import pl.my.game.database.dao.CommonDao;
+import pl.my.game.database.dao.PlayerDao;
+import pl.my.game.database.dao.StatsDao;
+import pl.my.game.database.dbutils.DbManager;
+import pl.my.game.database.models.Bank;
+import pl.my.game.database.models.Player;
+import pl.my.game.database.models.Stats;
+import pl.my.game.modelFX.BankModel;
+import pl.my.game.modelFX.PlayerModel;
+import pl.my.game.modelFX.StatsModel;
 import pl.my.game.utils.DialogsUtils;
 import pl.my.game.utils.FxmlUtils;
 
@@ -27,7 +36,17 @@ public class TopMenuBarController {
         mainBorderPane.getChildren().setAll(pane);
     }
 
-    public void saveGame(ActionEvent actionEvent) {
+    public void saveGame() {
+        PlayerModel playerModel = new PlayerModel();
+        BankModel bankModel= new BankModel();
+        StatsModel statsModel = new StatsModel();
+
+
+
+         playerModel.savePlayerToDB();
+         bankModel.saveBankToDB();
+         statsModel.saveStatsToDB();
+
     }
 
     public void loadGame(ActionEvent actionEvent) {

@@ -14,21 +14,21 @@ public class StatsModel {
 
     public static StatsProperty statsProperty;
 
+    Stats stats = new Stats();
 
 
     public void create(int counter) {
-        Stats stats = new Stats();
         StatsDao statsDao = new StatsDao(DbManager.getConnectionSource());
 
         stats.setId(counter);
-        stats.setHunger(62);
+        stats.setHunger(50);
         stats.setMaxHunger(100);
-        stats.setEnergy(80);
-        stats.setMaxEnergy(82);
-        stats.setHealth(100);
-        stats.setMaxHealth(82);
+        stats.setEnergy(50);
+        stats.setMaxEnergy(100);
+        stats.setHealth(50);
+        stats.setMaxHealth(100);
         stats.setExperience(0);
-        stats.setMadExperience(100);
+        stats.setMaxExperience(100);
 
         statsProperty = new StatsProperty(stats);
 
@@ -37,14 +37,7 @@ public class StatsModel {
         DbManager.closeConnectionSource();
     }
 
-    private int computeMaxEnergy(){
-        double maxEne=(82+player.getLevel()*10)+((100+player.getLevel()*10)*player.getAgility()*0.01);
-        return (int)maxEne;
-    }
-    private int computeMaxHealth(){
-        double maxHp=(82+player.getLevel()*10)+((100+player.getLevel()*10)*player.getStrange()*0.01);
-        return (int)maxHp;
-    }
+
 
 //    public int computeExp(){
 //        levelModel = new LevelModel();
@@ -59,9 +52,11 @@ public class StatsModel {
 
     public Stats loadFromDB(int counter){
         StatsDao statsDao=new StatsDao(DbManager.getConnectionSource());
-        Stats stats= new Stats();
 
         ArrayList<String[]> statsList = (ArrayList<String[]>) statsDao.loadQueryRawByID(counter);
+        stats.setId(Integer.parseInt(statsList.get(0)[0]));
+        System.out.println("LOAD");
+        System.out.println("stats.getID: "+ stats.getId());
         stats.setHunger(Integer.parseInt(statsList.get(0)[1]));
         stats.setMaxHunger(Integer.parseInt(statsList.get(0)[2]));
         stats.setEnergy(Integer.parseInt(statsList.get(0)[3]));
@@ -69,12 +64,35 @@ public class StatsModel {
         stats.setHealth(Integer.parseInt(statsList.get(0)[5]));
         stats.setMaxHealth(Integer.parseInt(statsList.get(0)[6]));
         stats.setExperience(Integer.parseInt(statsList.get(0)[7]));
-        stats.setMadExperience(Integer.parseInt(statsList.get(0)[8]));
+        stats.setMaxExperience(Integer.parseInt(statsList.get(0)[8]));
 
         statsProperty = new StatsProperty(stats);
 
 
         DbManager.closeConnectionSource();
         return stats;
+    }
+
+    public void saveStatsToDB(){
+        StatsDao statsDao = new StatsDao(DbManager.getConnectionSource());
+
+        stats.setId(statsProperty.getPropertyId());
+        System.out.println("SAVE");
+        System.out.println("statsProperty.getPropertyId: "+statsProperty.getPropertyId());
+        stats.setHunger((int) statsProperty.getPropertyHunger());
+        stats.setMaxHunger(statsProperty.getPropertyMaxHunger());
+
+        stats.setEnergy((int) statsProperty.getPropertyEnergy());
+        stats.setMaxEnergy(statsProperty.getPropertyMaxEnergy());
+
+        stats.setHealth((int) statsProperty.getPropertyHealth());
+        stats.setMaxHealth(statsProperty.getPropertyMaxHelth());
+
+        stats.setExperience((int) statsProperty.getPropertyExperience());
+        stats.setMaxExperience(statsProperty.getPropertyMaxExperience());
+
+        statsDao.createOrUpdate(stats);
+        DbManager.closeConnectionSource();
+
     }
 }

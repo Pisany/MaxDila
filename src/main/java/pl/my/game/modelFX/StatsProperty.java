@@ -4,12 +4,12 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import pl.my.game.database.models.Player;
 import pl.my.game.database.models.Stats;
 
 
 public class StatsProperty {
 
+    private IntegerProperty propertyId = new SimpleIntegerProperty(this, "propertyID");
     private DoubleProperty propertyHunger = new SimpleDoubleProperty(this, "propertyHunger");
     private IntegerProperty propertyMaxHunger = new SimpleIntegerProperty(this, "propertyMaxHunger");
     private DoubleProperty propertyEnergy = new SimpleDoubleProperty(this, "propertyEnergy");
@@ -18,6 +18,30 @@ public class StatsProperty {
     private IntegerProperty propertyMaxHelth = new SimpleIntegerProperty(this, "propertyMaxHelth");
     private DoubleProperty propertyExperience = new SimpleDoubleProperty(this, "propertyExperience");
     private IntegerProperty propertyMaxExperience = new SimpleIntegerProperty(this, "propertyMaxExperience");
+
+    StatsProperty(Stats stats) {
+        propertyId.set(stats.getId());
+        propertyHunger.set(stats.getHunger());
+        propertyMaxHunger.set(stats.getMaxHunger());
+        propertyEnergy.set(stats.getEnergy());
+        propertyMaxEnergy.set(stats.getMaxEnergy());
+        propertyHealth.set(stats.getHealth());
+        propertyMaxHelth.set(stats.getMaxHealth());
+        propertyExperience.set(stats.getExperience());
+        propertyMaxExperience.set(stats.getMaxExperience());
+    }
+
+    public int getPropertyId() {
+        return propertyId.get();
+    }
+
+    public IntegerProperty propertyIdProperty() {
+        return propertyId;
+    }
+
+    public void setPropertyId(int propertyId) {
+        this.propertyId.set(propertyId);
+    }
 
     public double getPropertyHunger() {
         return propertyHunger.get();
@@ -132,16 +156,5 @@ public class StatsProperty {
     }
 
 
-    StatsProperty(Stats stats) {
-        propertyHunger.set(stats.getHunger());
-        propertyMaxHunger.set(stats.getMaxHunger());
-        propertyEnergy.set(stats.getEnergy());
-        propertyMaxEnergy.set(stats.getMaxEnergy());
-        propertyHealth.set(stats.getHealth());
-        propertyMaxHelth.set(stats.getMaxHealth());
-        propertyExperience.set(stats.getExperience());
-        propertyMaxExperience.set(stats.getMaxExperience());
 
-
-    }
 }
